@@ -1,0 +1,16 @@
+---
+- name: azure-test
+  hosts: 127.0.0.1 
+  connection: local
+  tasks: 
+  - name: "Azure VM"
+    azure_rm_virtualmachine:
+      resource_group: demo-ram-ansible
+      name: testvm10
+      os_type: Linux
+      ssh_public_keys: ram.pub
+      admin_username: rchittala
+      image:
+        offer: RHEL
+        sku: '7-RAW'
+        version: latest
