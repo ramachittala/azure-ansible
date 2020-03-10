@@ -5,7 +5,7 @@
   tasks: 
   - name: "Azure VM"
     azure_rm_virtualmachine:
-      resource_group: demo-ram-ansible
+      resource_group: test-ram-today
       name: testvm10
       os_type: Linux
       ssh_public_keys: ram.pub
